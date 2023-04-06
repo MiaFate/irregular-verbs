@@ -28,23 +28,19 @@ export const Card: React.FC<CardProps> = ({ infinitive, pastSimple, pastParticip
 
 const CardContent: React.FC<CardContentProps> = ({ face, infinitive, pastSimple, pastParticiple }) => {
     if (face === "front") {
-        return (<>
-            {/* <div className="flex flex-col justify-between align-middle p-4 bg-zinc-800 rounded-md shadow-lg">
-                <div className="card-header flex flex-col  mb-1 bg-zinc-800 rounded-md shadow-lg">
+        return (
+            <>
+                <div className="flex flex-row justify-center p-4 mb-1 bg-zinc-800 rounded-md shadow-lg">
                     <h2 className="cards-title text-yellow-50">{infinitive}</h2>
                 </div>
-            </div> */}
-            <div className="card-header flex flex-row justify-center p-4 mb-1 bg-zinc-800 rounded-md shadow-lg">
-                <h2 className="cards-title text-yellow-50">{infinitive}</h2>
-            </div>
-        </>)
+            </>)
     }
     return (
         <>
-            <div className="flex flex-row justify-around p-4 mb-1 bg-slate-600 text-yellow-100 align-middle">
-                <p>{infinitive}</p>
-                <p>{pastSimple}</p>
-                <p>{pastParticiple}</p>
+            <div className="flex flex-row justify-around p-4 mb-1 bg-slate-600 align-middle rounded-md shadow-lg">
+                <h2 className="cards-title text-yellow-50">{infinitive}</h2>
+                <h2 className="cards-title text-yellow-50">{pastSimple}</h2>
+                <h2 className="cards-title text-yellow-50">{pastParticiple}</h2>
             </div>
         </>
     )
