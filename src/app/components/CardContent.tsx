@@ -53,7 +53,7 @@ export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
             </>)
     }
     return (
-        <div className="border border-black rounded-md  shadow-lg">
+        <div className="border border-black overflow-hidden rounded-md  shadow-lg">
             <table {...getTableProps()} className=" w-full text-center p-4 mb-1">
                 <thead className="bg-zinc-800 text-yellow-50">
                     {// Loop over the header rows
