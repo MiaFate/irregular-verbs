@@ -9,7 +9,7 @@ interface Data {
 }
 export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
     const verbSplitter = (verb: string) => {
-        const modes = verb.split("-")
+        const modes = verb.split(" ").join("").split("-")
         return (<>{modes[0]}< br />{modes[1]}</>)
     }
     const data = useMemo(
@@ -17,7 +17,7 @@ export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
             c1: verb.infinitive,
             c2: verb.pastSimple.includes("-") ? verbSplitter(verb.pastSimple) : verb.pastSimple,
             c3: verb.pastSimple.includes("-") ? verbSplitter(verb.pastParticiple) : verb.pastParticiple,
-        }], []
+        }], [verb]
     );
     const columns = useMemo<Column<Data>[]>(
         () => [
@@ -56,19 +56,25 @@ export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
         <table className=" w-full border border-black text-center p-4 mb-1 rounded-md shadow-lg" {...getTableProps()}>
             <thead className="bg-zinc-800 text-yellow-50">
                 {// Loop over the header rows
-                    headerGroups.map(headerGroup => (
+                    headerGroups.map(headerGroup => {
                         // Apply the header row props
-                        <tr {...headerGroup.getHeaderGroupProps()}>
-                            {// Loop over the headers in each row
-                                headerGroup.headers.map(column => (
-                                    // Apply the header cell props
-                                    <th {...column.getHeaderProps()}>
-                                        {// Render the header
-                                            column.render('Header')}
-                                    </th>
-                                ))}
-                        </tr>
-                    ))}
+                        const { key, ...restHeaderGroupProps } = headerGroup.getHeaderGroupProps();
+                        return (
+                            <tr key={key} {...restHeaderGroupProps}>
+                                {// Loop over the headers in each row
+                                    headerGroup.headers.map(column => {
+                                        const { key, ...restColumn } = column.getHeaderProps();
+                                        return (
+                                            // Apply the header cell props
+                                            <th key={key} {...restColumn}>
+                                                {// Render the header
+                                                    column.render('Header')}
+                                            </th>
+                                        )
+                                    })}
+                            </tr>
+                        )
+                    })}
             </thead>
             {/* Apply the table body props */}
             <tbody {...getTableBodyProps()}>
@@ -76,14 +82,16 @@ export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
                     rows.map(row => {
                         // Prepare the row for display
                         prepareRow(row)
+                        const { key, ...restRowProps } = row.getRowProps();
                         return (
                             // Apply the row props
-                            <tr {...row.getRowProps()}>
+                            <tr key={key} {...restRowProps}>
                                 {// Loop over the rows cells
                                     row.cells.map(cell => {
                                         // Apply the cell props
+                                        const { key, ...restCellProps } = cell.getCellProps();
                                         return (
-                                            <td className="border border-black" {...cell.getCellProps()}>
+                                            <td key={key} className="border border-black"  {...restCellProps}>
                                                 {// Render the cell contents
                                                     cell.render('Cell')}
                                             </td>
