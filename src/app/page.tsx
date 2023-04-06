@@ -2,12 +2,6 @@
 import { generateIrregularVerbs } from './api/irregular-verbs/route';
 import { Card } from './components/Card';
 
-// interface Verb {
-//   "infinitive": string;
-//   "past-simple": string;
-//   "past-participle": string;
-// }
-
 //export const dynamic = 60; esto genera una pagina cada 60 seg cuando un cliente accede a ella
 //export const revalidate = Infinity;
 export default function Home() {
