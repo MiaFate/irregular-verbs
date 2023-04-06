@@ -53,55 +53,57 @@ export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
             </>)
     }
     return (
-        <table className=" w-full border border-black text-center p-4 mb-1 rounded-md shadow-lg" {...getTableProps()}>
-            <thead className="bg-zinc-800 text-yellow-50">
-                {// Loop over the header rows
-                    headerGroups.map(headerGroup => {
-                        // Apply the header row props
-                        const { key, ...restHeaderGroupProps } = headerGroup.getHeaderGroupProps();
-                        return (
-                            <tr key={key} {...restHeaderGroupProps}>
-                                {// Loop over the headers in each row
-                                    headerGroup.headers.map(column => {
-                                        const { key, ...restColumn } = column.getHeaderProps();
-                                        return (
-                                            // Apply the header cell props
-                                            <th key={key} {...restColumn}>
-                                                {// Render the header
-                                                    column.render('Header')}
-                                            </th>
-                                        )
-                                    })}
-                            </tr>
-                        )
-                    })}
-            </thead>
-            {/* Apply the table body props */}
-            <tbody {...getTableBodyProps()}>
-                {// Loop over the table rows
-                    rows.map(row => {
-                        // Prepare the row for display
-                        prepareRow(row)
-                        const { key, ...restRowProps } = row.getRowProps();
-                        return (
-                            // Apply the row props
-                            <tr key={key} {...restRowProps}>
-                                {// Loop over the rows cells
-                                    row.cells.map(cell => {
-                                        // Apply the cell props
-                                        const { key, ...restCellProps } = cell.getCellProps();
-                                        return (
-                                            <td key={key} className="border border-black"  {...restCellProps}>
-                                                {// Render the cell contents
-                                                    cell.render('Cell')}
-                                            </td>
-                                        )
-                                    })}
-                            </tr>
-                        )
-                    })}
-            </tbody>
-        </table>
+        <div className="border border-black rounded-md  shadow-lg">
+            <table {...getTableProps()} className=" w-full text-center p-4 mb-1">
+                <thead className="bg-zinc-800 text-yellow-50">
+                    {// Loop over the header rows
+                        headerGroups.map(headerGroup => {
+                            // Apply the header row props
+                            const { key, ...restHeaderGroupProps } = headerGroup.getHeaderGroupProps();
+                            return (
+                                <tr key={key} {...restHeaderGroupProps}>
+                                    {// Loop over the headers in each row
+                                        headerGroup.headers.map(column => {
+                                            const { key, ...restColumn } = column.getHeaderProps();
+                                            return (
+                                                // Apply the header cell props
+                                                <th key={key} {...restColumn}>
+                                                    {// Render the header
+                                                        column.render('Header')}
+                                                </th>
+                                            )
+                                        })}
+                                </tr>
+                            )
+                        })}
+                </thead>
+                {/* Apply the table body props */}
+                <tbody {...getTableBodyProps()}>
+                    {// Loop over the table rows
+                        rows.map(row => {
+                            // Prepare the row for display
+                            prepareRow(row)
+                            const { key, ...restRowProps } = row.getRowProps();
+                            return (
+                                // Apply the row props
+                                <tr key={key} {...restRowProps}>
+                                    {// Loop over the rows cells
+                                        row.cells.map(cell => {
+                                            // Apply the cell props
+                                            const { key, ...restCellProps } = cell.getCellProps();
+                                            return (
+                                                <td key={key} className="border-0 border-black"  {...restCellProps}>
+                                                    {// Render the cell contents
+                                                        cell.render('Cell')}
+                                                </td>
+                                            )
+                                        })}
+                                </tr>
+                            )
+                        })}
+                </tbody>
+            </table>
+        </div>
     )
 
     return (
