@@ -1,15 +1,26 @@
-//import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
+import { generateIrregularVerbs } from './api/irregular-verbs/route';
+import { Card } from './components/Card';
 
+// interface Verb {
+//   "infinitive": string;
+//   "past-simple": string;
+//   "past-participle": string;
+// }
+
+//export const dynamic = 60; esto genera una pagina cada 60 seg cuando un cliente accede a ella
+//export const revalidate = Infinity;
 export default function Home() {
+
+  const verbos = generateIrregularVerbs();
   return (
     <main >
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <div className="grid grid-cols-4 gap-4">
+        {verbos && verbos.map((verb) => (
+          <Card key={verb.infinitive} infinitive={verb.infinitive} pastSimple={verb.pastSimple} pastParticiple={verb.pastParticiple} />
+        ))}
+      </div>
     </main>
   )
 }
+
