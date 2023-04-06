@@ -4,7 +4,7 @@ import { useState } from "react";
 import { CardContent } from "./CardContent";
 import { CardProps } from "../types"
 
-export const Card: React.FC<CardProps> = ({ infinitive, pastSimple, pastParticiple }) => {
+export const Card: React.FC<CardProps> = ({ verb }) => {
     const [face, setFace] = useState<"front" | "back">("front")
 
     const handlerClick = () => {
@@ -13,7 +13,7 @@ export const Card: React.FC<CardProps> = ({ infinitive, pastSimple, pastParticip
 
     return (
         <div onClick={handlerClick}>
-            <CardContent face={face} infinitive={infinitive} pastSimple={pastSimple} pastParticiple={pastParticiple} />
+            <CardContent face={face} verb={verb} />
         </div>
     )
 

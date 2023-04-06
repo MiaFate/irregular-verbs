@@ -88,8 +88,8 @@ export function generateIrregularVerbs() {
     },
     {
       "infinitive": "dream",
-      "pastSimple": "dreamt (also dreamed)",
-      "pastParticiple": "dreamt (also dreamed)"
+      "pastSimple": "dreamt - dreamed",
+      "pastParticiple": "dreamt - dreamed"
     },
     {
       "infinitive": "drink",

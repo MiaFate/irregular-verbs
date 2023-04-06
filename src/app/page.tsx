@@ -11,7 +11,7 @@ export default function Home() {
     <main >
       <div className="flex flex-col md:grid md:grid-cols-4 gap-4 p-5">
         {verbos && verbos.map((verb) => (
-          <Card key={verb.infinitive} infinitive={verb.infinitive} pastSimple={verb.pastSimple} pastParticiple={verb.pastParticiple} />
+          <Card key={verb.infinitive} verb={verb} />
         ))}
       </div>
     </main>
