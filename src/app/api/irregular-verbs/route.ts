@@ -195,7 +195,127 @@ export function generateIrregularVerbs() {
       "infinitive": "leave",
       "pastSimple": "left",
       "pastParticiple": "left"
-    }
+    },
+    {
+      "infinitive": "lend",
+      "pastSimple": "lent",
+      "pastParticiple": "lent"
+    },
+    {
+      "infinitive": "let",
+      "pastSimple": "let",
+      "pastParticiple": "let"
+    },
+    {
+      "infinitive": "lie",
+      "pastSimple": "lay",
+      "pastParticiple": "lain"
+    },
+    {
+      "infinitive": "lose",
+      "pastSimple": "lost",
+      "pastParticiple": "lost"
+    },
+    {
+      "infinitive": "make",
+      "pastSimple": "made",
+      "pastParticiple": "made"
+    },
+    {
+      "infinitive": "mean",
+      "pastSimple": "meant",
+      "pastParticiple": "meant"
+    },
+    {
+      "infinitive": "meet",
+      "pastSimple": "met",
+      "pastParticiple": "met"
+    },
+    {
+      "infinitive": "pay",
+      "pastSimple": "paid",
+      "pastParticiple": "paid"
+    },
+    {
+      "infinitive": "put",
+      "pastSimple": "put",
+      "pastParticiple": "put"
+    },
+    {
+      "infinitive": "read",
+      "pastSimple": "read",
+      "pastParticiple": "read"
+    },
+    {
+      "infinitive": "ride",
+      "pastSimple": "rode",
+      "pastParticiple": "ridden"
+    },
+    {
+      "infinitive": "ring",
+      "pastSimple": "rang",
+      "pastParticiple": "rung"
+    },
+    {
+      "infinitive": "run",
+      "pastSimple": "ran",
+      "pastParticiple": "run"
+    },
+    {
+      "infinitive": "say",
+      "pastSimple": "said",
+      "pastParticiple": "said"
+    },
+    {
+      "infinitive": "see",
+      "pastSimple": "saw",
+      "pastParticiple": "seen"
+    },
+    {
+      "infinitive": "sell",
+      "pastSimple": "sold",
+      "pastParticiple": "sold"
+    },
+    {
+      "infinitive": "send",
+      "pastSimple": "sent",
+      "pastParticiple": "sent"
+    },
+    {
+      "infinitive": "set",
+      "pastSimple": "set",
+      "pastParticiple": "set"
+    },
+    {
+      "infinitive": "shine",
+      "pastSimple": "shone",
+      "pastParticiple": "shone"
+    },
+    {
+      "infinitive": "shut",
+      "pastSimple": "shut",
+      "pastParticiple": "shut"
+    },
+    {
+      "infinitive": "sing",
+      "pastSimple": "sang",
+      "pastParticiple": "sung"
+    },
+    {
+      "infinitive": "sit",
+      "pastSimple": "sat",
+      "pastParticiple": "sat"
+    },
+    {
+      "infinitive": "sleep",
+      "pastSimple": "slept",
+      "pastParticiple": "slept"
+    },
+    {
+      "infinitive": "smell",
+      "pastSimple": "smelt - smelled",
+      "pastParticiple": "smelt - smelled"
+    },
   ]
 }
 
