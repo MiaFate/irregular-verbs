@@ -12,7 +12,7 @@ export const Card: React.FC<CardProps> = ({ verb }) => {
     }
 
     return (
-        <div onClick={handlerClick}>
+        <div onClick={handlerClick} className="h-[120px]">
             <CardContent face={face} verb={verb} />
         </div>
     )

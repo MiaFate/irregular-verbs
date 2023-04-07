@@ -47,14 +47,14 @@ export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
     if (face === "front") {
         return (
             <>
-                <div className="flex flex-row place-content-center p-4 mb-1 bg-zinc-800 rounded-md shadow-lg cursor-pointer select-none">
-                    <h2 className="cards-title text-yellow-50">{verb.infinitive}</h2>
+                <div className="flex flex-row place-content-center p-4 mb-1 bg-zinc-800 rounded-md shadow-lg cursor-pointer select-none h-full">
+                    <h2 className="cards-title font-bold text-yellow-50">{verb.infinitive}</h2>
                 </div>
             </>)
     }
     return (
-        <div className="border border-black overflow-hidden rounded-md  shadow-lg cursor-pointer select-none">
-            <table {...getTableProps()} className=" w-full text-center p-4 mb-1">
+        <div className="border border-black overflow-hidden rounded-md  shadow-lg cursor-pointer select-none h-full">
+            <table {...getTableProps()} className=" w-full h-full text-center p-4 mb-1">
                 <thead className="bg-zinc-800 text-yellow-50">
                     {// Loop over the header rows
                         headerGroups.map(headerGroup => {
@@ -92,7 +92,7 @@ export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
                                             // Apply the cell props
                                             const { key, ...restCellProps } = cell.getCellProps();
                                             return (
-                                                <td key={key} className="border-0 border-black"  {...restCellProps}>
+                                                <td key={key} className="border-0 border-black place-content-center h-full"  {...restCellProps}>
                                                     {// Render the cell contents
                                                         cell.render('Cell')}
                                                 </td>
