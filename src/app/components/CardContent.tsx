@@ -47,8 +47,8 @@ export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
     if (face === "front") {
         return (
             <>
-                <div className="flex flex-row place-content-center p-4 mb-1 bg-zinc-800 rounded-md shadow-lg cursor-pointer select-none h-full">
-                    <h2 className="cards-title font-bold text-yellow-50">{verb.infinitive}</h2>
+                <div className="flex flex-row h-full place-content-center place-items-center p-4 mb-1 bg-zinc-800 rounded-md shadow-lg cursor-pointer select-none">
+                    <h2 className="cards-title font-bold text-yellow-50 capitalize">{verb.infinitive}</h2>
                 </div>
             </>)
     }
@@ -92,7 +92,7 @@ export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
                                             // Apply the cell props
                                             const { key, ...restCellProps } = cell.getCellProps();
                                             return (
-                                                <td key={key} className="border-0 border-black place-content-center h-full"  {...restCellProps}>
+                                                <td key={key} className="border-0 border-black place-content-center h-full capitalize font-semibold"  {...restCellProps}>
                                                     {// Render the cell contents
                                                         cell.render('Cell')}
                                                 </td>
