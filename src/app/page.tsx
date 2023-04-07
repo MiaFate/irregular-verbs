@@ -9,7 +9,7 @@ export default function Home() {
   const verbos = generateIrregularVerbs();
   return (
     <main >
-      <div className="flex flex-col md:grid md:grid-cols-4 gap-4 p-5">
+      <div className="flex flex-col md:grid md:grid-cols-4 gap-3 p-5">
         {verbos && verbos.map((verb) => (
           <Card key={verb.infinitive} verb={verb} />
         ))}
