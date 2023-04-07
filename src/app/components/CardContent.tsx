@@ -47,13 +47,13 @@ export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
     if (face === "front") {
         return (
             <>
-                <div className="flex flex-row place-content-center p-4 mb-1 bg-zinc-800 rounded-md shadow-lg">
+                <div className="flex flex-row place-content-center p-4 mb-1 bg-zinc-800 rounded-md shadow-lg cursor-pointer select-none">
                     <h2 className="cards-title text-yellow-50">{verb.infinitive}</h2>
                 </div>
             </>)
     }
     return (
-        <div className="border border-black overflow-hidden rounded-md  shadow-lg">
+        <div className="border border-black overflow-hidden rounded-md  shadow-lg cursor-pointer select-none">
             <table {...getTableProps()} className=" w-full text-center p-4 mb-1">
                 <thead className="bg-zinc-800 text-yellow-50">
                     {// Loop over the header rows
