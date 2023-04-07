@@ -316,6 +316,82 @@ export function generateIrregularVerbs() {
       "pastSimple": "smelt - smelled",
       "pastParticiple": "smelt - smelled"
     },
+    {
+      "infinitive": "speak",
+      "pastSimple": "spoke",
+      "pastParticiple": "spoken"
+    },
+    {
+      "infinitive": "spend",
+      "pastSimple": "spent",
+      "pastParticiple": "spent"
+    },
+    {
+      "infinitive": "stand",
+      "pastSimple": "stood",
+      "pastParticiple": "stood"
+    },
+    {
+      "infinitive": "steal",
+      "pastSimple": "stole",
+      "pastParticiple": "stolen"
+    },
+    {
+      "infinitive": "swim",
+      "pastSimple": "swam",
+      "pastParticiple": "swum"
+    },
+    {
+      "infinitive": "take",
+      "pastSimple": "took",
+      "pastParticiple": "taken"
+    },
+    {
+      "infinitive": "teach",
+      "pastSimple": "taught",
+      "pastParticiple": "taught"
+    },
+    {
+      "infinitive": "tell",
+      "pastSimple": "told",
+      "pastParticiple": "told"
+    },
+    {
+      "infinitive": "think",
+      "pastSimple": "thought",
+      "pastParticiple": "thought"
+    },
+    {
+      "infinitive": "throw",
+      "pastSimple": "threw",
+      "pastParticiple": "thrown"
+    },
+    {
+      "infinitive": "understand",
+      "pastSimple": "understood",
+      "pastParticiple": "understood"
+    },
+    {
+      "infinitive": "wake",
+      "pastSimple": "woke",
+      "pastParticiple": "woken"
+    },
+    {
+      "infinitive": "wear",
+      "pastSimple": "wore",
+      "pastParticiple": "worn"
+    },
+    {
+      "infinitive": "win",
+      "pastSimple": "won",
+      "pastParticiple": "won"
+    },
+    {
+      "infinitive": "write",
+      "pastSimple": "wrote",
+      "pastParticiple": "written"
+    }
+
   ]
 }
 
