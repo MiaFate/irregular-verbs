@@ -48,7 +48,7 @@ export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
         return (
             <>
                 <div className="flex flex-row h-full place-content-center place-items-center p-4 mb-1 bg-zinc-800  dark:bg-zinc-900 rounded-md shadow-lg cursor-pointer select-none">
-                    <h2 className="cards-title font-bold text-yellow-50 dark:text-gray-500 capitalize">{verb.infinitive}</h2>
+                    <h2 className="cards-title font-bold text-yellow-50 dark:text-gray-300 capitalize">{verb.infinitive}</h2>
                 </div>
             </>)
     }
