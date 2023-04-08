@@ -2,8 +2,6 @@
 const withPWA = require('next-pwa')({
   dest: 'public',
   register: true,
-  scope: '/app',
-  sw: 'service-worker.js',
 });
 
 const nextConfig = {
