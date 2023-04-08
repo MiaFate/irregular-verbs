@@ -9,6 +9,10 @@ const montserrat = Montserrat({
 export const metadata = {
   title: 'Irregular Verbs',
   description: 'pagina para practicar los verbos irregulares en ingles',
+  manifest: "/manifest.json",
+  icons: {
+    icon: ["/icon-512x512.png"]
+  }
 }
 
 export default function RootLayout({
