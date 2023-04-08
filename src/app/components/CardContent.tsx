@@ -47,15 +47,15 @@ export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
     if (face === "front") {
         return (
             <>
-                <div className="flex flex-row h-full place-content-center place-items-center p-4 mb-1 bg-zinc-800 rounded-md shadow-lg cursor-pointer select-none">
-                    <h2 className="cards-title font-bold text-yellow-50 capitalize">{verb.infinitive}</h2>
+                <div className="flex flex-row h-full place-content-center place-items-center p-4 mb-1 bg-zinc-800  dark:bg-zinc-900 rounded-md shadow-lg cursor-pointer select-none">
+                    <h2 className="cards-title font-bold text-yellow-50 dark:text-gray-500 capitalize">{verb.infinitive}</h2>
                 </div>
             </>)
     }
     return (
-        <div className="border border-black overflow-hidden rounded-md  shadow-lg cursor-pointer select-none h-full">
+        <div className="border border-black dark:border-zinc-900 overflow-hidden rounded-md  shadow-lg cursor-pointer select-none h-full">
             <table {...getTableProps()} className=" w-full h-full text-center p-4 mb-1">
-                <thead className="bg-zinc-800 h-1/2 text-yellow-50">
+                <thead className="bg-zinc-800 dark:bg-zinc-900 h-1/2 text-yellow-50 dark:text-gray-500">
                     {// Loop over the header rows
                         headerGroups.map(headerGroup => {
                             // Apply the header row props
