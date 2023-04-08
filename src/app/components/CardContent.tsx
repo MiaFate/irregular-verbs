@@ -55,7 +55,7 @@ export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
     return (
         <div className="border border-black overflow-hidden rounded-md  shadow-lg cursor-pointer select-none h-full">
             <table {...getTableProps()} className=" w-full h-full text-center p-4 mb-1">
-                <thead className="bg-zinc-800 text-yellow-50">
+                <thead className="bg-zinc-800 h-1/2 text-yellow-50">
                     {// Loop over the header rows
                         headerGroups.map(headerGroup => {
                             // Apply the header row props
@@ -78,7 +78,7 @@ export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
                         })}
                 </thead>
                 {/* Apply the table body props */}
-                <tbody {...getTableBodyProps()}>
+                <tbody className="h-1/2"{...getTableBodyProps()}>
                     {// Loop over the table rows
                         rows.map(row => {
                             // Prepare the row for display
