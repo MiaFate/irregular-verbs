@@ -1,3 +1,4 @@
+"use client"
 import { Transition } from "@headlessui/react"
 import { useTheme } from "@wits/next-themes";
 import Link from "next/link"
