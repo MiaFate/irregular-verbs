@@ -11,7 +11,7 @@ export const metadata = {
   description: 'pagina para practicar los verbos irregulares en ingles',
   manifest: "/manifest.json",
   icons: {
-    icon: ["/icon-512x512.png"]
+    icon: ["/icon-192x192.png", "/icon-256x256.png", "/icon-384x384.png", "/icon-512x512.png"]
   }
 }
 
