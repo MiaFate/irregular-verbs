@@ -1,4 +1,5 @@
 import './globals.css'
+import { ServerThemeProvider } from '@wits/next-themes'
 import { Montserrat } from 'next/font/google';
 
 const montserrat = Montserrat({
@@ -21,8 +22,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${montserrat.variable}`}>
-      <body className='bg-white text-black dark:bg-zinc-800 dark:text-gray-400'>{children}</body>
-    </html>
+    <ServerThemeProvider attribute="class">
+      <html lang="en" className={`${montserrat.variable}`}>
+        <body className='bg-white text-black dark:bg-zinc-800 dark:text-gray-400'>{children}</body>
+      </html>
+    </ServerThemeProvider>
   )
 }
