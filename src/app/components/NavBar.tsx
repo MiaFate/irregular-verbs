@@ -39,7 +39,7 @@ export const NavBar = () => {
                         </div>
                     </div>
 
-                    <div className="-mr-2 flex md:hidden">
+                    <div className="mr-4 flex md:hidden">
                         <ToggleThemeButton />
                     </div>
 
