@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <ServerThemeProvider attribute="class">
       <html lang="en" className={`${montserrat.variable}`}>
-        <body className='bg-white text-black dark:bg-zinc-800 dark:text-gray-400'>{children}</body>
+        <body className='bg-white text-black dark:bg-zinc-800 dark:text-gray-400 h-screen m-0'>{children}</body>
       </html>
     </ServerThemeProvider>
   )

@@ -11,8 +11,9 @@ export const NavBar = () => {
     return (
         <nav className="bg-zinc-800 dark:bg-zinc-900 sticky top-0">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16">
+                <div className="flex items-center justify-center h-16">
                     <div className="flex items-center">
+                        <h1 className="font-extrabold p-4 text-white md:text-3xl select-none">Irregular Verbs List</h1>
                         {/* <div className="flex-shrink-0">
                             <img
                                 className="h-8 w-8"
