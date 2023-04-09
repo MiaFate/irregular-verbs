@@ -7,11 +7,14 @@ interface Data {
     c2: string | JSX.Element;
     c3: string | JSX.Element;
 }
+
+const verbSplitter = (verb: string) => {
+    const modes = verb.split(" ").join("").split("-")
+    return (<>{modes[0]}< br />{modes[1]}</>)
+}
+
 export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
-    const verbSplitter = (verb: string) => {
-        const modes = verb.split(" ").join("").split("-")
-        return (<>{modes[0]}< br />{modes[1]}</>)
-    }
+
     const data = useMemo(
         () => [{
             c1: verb.infinitive,
@@ -105,14 +108,5 @@ export const CardContent: React.FC<CardContentProps> = ({ face, verb }) => {
             </table>
         </div>
     )
+};
 
-    return (
-        <>
-            <div className="flex flex-row place-content-center p-4 mb-1 bg-slate-600 rounded-md shadow-lg">
-                <h2 className="text-center text-yellow-50">{verb.infinitive}</h2>
-                <h2 className="text-center text-yellow-50">{verb.pastSimple}</h2>
-                <h2 className="text-center text-yellow-50">{verb.pastParticiple}</h2>
-            </div>
-        </>
-    )
-}
