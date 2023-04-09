@@ -3,7 +3,7 @@ import { NavBar } from './components/NavBar'
 import MainGrid from './components/MainGrid'
 import { Footer } from './components/Footer'
 
-const page = () => {
+const Home = () => {
     return (
         <main className='max-h-full flex flex-col'>
             <header >
@@ -19,4 +19,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Home;
