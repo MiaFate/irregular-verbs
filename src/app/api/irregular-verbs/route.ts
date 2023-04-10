@@ -1,5 +1,7 @@
 
+import { verbs } from "../../utils/verbs";
 export function generateIrregularVerbs() {
+  return verbs
   return [
     {
       "infinitive": "be",
