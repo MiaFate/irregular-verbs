@@ -1,5 +1,5 @@
 "use client"
-import MainGrid from "./components/MainGrid";
+import { MainGrid } from "./components/MainGrid";
 
 export default function Home() {
 
