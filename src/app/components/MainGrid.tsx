@@ -4,7 +4,7 @@ import { Card } from './Card';
 
 //export const dynamic = 60; esto genera una pagina cada 60 seg cuando un cliente accede a ella
 //export const revalidate = Infinity;
-export default function MainGrid() {
+export const MainGrid = () => {
 
   const verbos = generateIrregularVerbs();
   return (
