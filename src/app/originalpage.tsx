@@ -1,5 +1,5 @@
 
-import MainGrid from "./components/MainGrid";
+import { MainGrid } from "./components/MainGrid";
 import { NavBar } from "./components/NavBar";
 
 export default function Home() {
