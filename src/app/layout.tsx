@@ -1,6 +1,7 @@
 import './globals.css'
 import { ServerThemeProvider } from '@wits/next-themes'
 import { Montserrat } from 'next/font/google';
+import { GlobalProvider } from './context/context';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -22,10 +23,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ServerThemeProvider attribute="class">
-      <html lang="en" className={`${montserrat.variable}`}>
-        <body className='bg-white text-black dark:bg-zinc-800 dark:text-gray-400 h-screen m-0'>{children}</body>
-      </html>
-    </ServerThemeProvider>
+    <GlobalProvider>
+      <ServerThemeProvider attribute="class">
+        <html lang="en" className={`${montserrat.variable}`}>
+          <body className='bg-white text-black dark:bg-zinc-800 dark:text-gray-400 h-screen m-0'>{children}</body>
+        </html>
+      </ServerThemeProvider>
+    </GlobalProvider>
   )
 }

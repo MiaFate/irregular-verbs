@@ -9,4 +9,5 @@ export interface CardContentProps extends CardProps {
 
 export interface CardProps {
     verb: Verb;
+    className?: string;
 }
