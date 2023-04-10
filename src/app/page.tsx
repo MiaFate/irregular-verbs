@@ -1,4 +1,3 @@
-import React from 'react'
 import { NavBar } from './components/NavBar'
 import { MainGrid } from './components/MainGrid'
 import { Footer } from './components/Footer'
