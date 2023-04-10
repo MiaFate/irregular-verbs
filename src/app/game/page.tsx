@@ -23,12 +23,20 @@ export default function Home() {
   const handleCheckAnswer = () => {
     if (!currentVerb) return;
 
+    // if (currentQuestion === 'pastSimple' && currentVerb.pastSimple === userInput) {
+    //   setAnswer('¡Correcto! La respuesta es el pasado simple');
+    // } else if (currentQuestion === 'pastParticiple' && currentVerb.pastParticiple === userInput) {
+    //   setAnswer('¡Correcto! La respuesta es el participio pasado');
+    // } else {
+    //   setAnswer(`Incorrecto. La respuesta es ${currentQuestion === 'pastSimple' ? currentVerb.pastSimple : currentVerb.pastParticiple}`);
+    // }
+
     if (currentQuestion === 'pastSimple' && currentVerb.pastSimple === userInput) {
-      setAnswer('¡Correcto! La respuesta es el pasado simple');
+      setAnswer('Correct! The answer is the past simple.');
     } else if (currentQuestion === 'pastParticiple' && currentVerb.pastParticiple === userInput) {
-      setAnswer('¡Correcto! La respuesta es el participio pasado');
+      setAnswer('Correct! The answer is the past participle.');
     } else {
-      setAnswer(`Incorrecto. La respuesta es ${currentQuestion === 'pastSimple' ? currentVerb.pastSimple : currentVerb.pastParticiple}`);
+      setAnswer(`Incorrect. The answer is ${currentQuestion === 'pastSimple' ? currentVerb.pastSimple : currentVerb.pastParticiple}`);
     }
 
     setShowContinueButton(true);
