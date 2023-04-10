@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useState, useEffect } from 'react';
 import { useGlobalContext } from "../context/context";
 
 interface SearchBoxProps {
@@ -7,7 +7,8 @@ interface SearchBoxProps {
 }
 
 export const SearchBox = ({ placeholder }: SearchBoxProps) => {
-    const { setQuery } = useGlobalContext();
+    const { query, setQuery } = useGlobalContext();
+
 
     const handleChange = (e: React.ChangeEvent) => {
         const { value } = e.target as HTMLInputElement;
@@ -18,7 +19,7 @@ export const SearchBox = ({ placeholder }: SearchBoxProps) => {
 
     return (
         <div className="flex flex-row justify-center pt-5 pb-5">
-            <input className="shadow appearance-none border border-gray-400 rounded m-auto py-2 px-3 text-black dark:text-white leading-tight focus:outline-none focus:shadow-outline" type="text" id="searchBox" placeholder={placeholder} onChange={handleChange} ></input>
+            <input className="shadow appearance-none border border-gray-400 rounded m-auto py-2 px-3 text-black dark:text-white leading-tight focus:outline-none focus:shadow-outline" type="text" id="searchBox" placeholder={placeholder} onChange={handleChange} value={query} ></input>
         </div>
     )
 }
