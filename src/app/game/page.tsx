@@ -48,7 +48,7 @@ export default function Home() {
         <div className="my-4 sm:my-8">
           {currentVerb ? (
             <h2 className="text-lg sm:text-2xl font-bold">
-              What is the {currentQuestion === 'pastSimple' ? 'past simple' : 'past participle'} of "{currentVerb.infinitive}"?
+              What is the {currentQuestion === 'pastSimple' ? 'past simple' : 'past participle'} of &quot;{currentVerb.infinitive}&quot;?
             </h2>
           ) : (
             <button onClick={handleNewVerb} className="py-2 px-4 border border-transparent rounded-md shadow-sm text-sm sm:text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
