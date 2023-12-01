@@ -1,4 +1,5 @@
 ## Irregular Verbs App
+Next project to practice server side components and learn english irregular verbs at the same time.
 
 Live [https://irregularverbs-mia.vercel.app/](https://irregularverbs-mia.vercel.app/) 
 
